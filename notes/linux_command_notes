@@ -1,0 +1,11 @@
+1. System performance.
+  vmstat, iostat, ifstat, dstat;
+  alias dstat='dstat -cdlmnpsy'
+
+2. Network flow
+  slurm
+  slurm -i ppp0
+
+3. traceroot/mtr
+
+4. dmesg to show hardware or driver error.
