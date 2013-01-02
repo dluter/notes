@@ -1,0 +1,7 @@
+
+
+
+
+[remote]
+  set/reset remote repository url
+  git remote set-url origin git://new.url.here
