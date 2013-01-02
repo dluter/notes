@@ -1,5 +1,6 @@
-
-
+[push]
+  avoid non-fast-forward(force update).
+  git push -f
 
 
 [remote]
