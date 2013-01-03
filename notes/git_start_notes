@@ -25,15 +25,18 @@
   git status -uno [-uall -unormal] (don't show untracked files)
   git status -s (short-format output)
 
+[commit]
+  git commit --amend (modify last commit information)
+
 [push]
   avoid non-fast-forward(force update).
   git push -f
-  git push remote-repo branch_name (push branch to remote)
+  git push <remote> <local_branch>:<remote_branch> (push local branch to remote branch)
 
 [branch]
   new branch
   git branch branch_name (new branch)
-  git checkout -b branch_name (new branch and checkout to it)
+  git checkout -b <branch> (new branch and checkout to it)
   
   delete local branch
   git branch -d branch_name (delete local branch)
@@ -45,25 +48,38 @@
   rename branch
   git branch -m old_name new_name (rename branch name)
   git branch -M old_name new_name (force rename branch)
+  
+  git branch -v (show last commit information)
+  
+  track remote branch
+  git checkout --track <remote>/<branch>
+  git checkout -b <branch> <remote>/<branch> (switch to new branch based on remote,
+  new branch name can be different from remote.)
 
 [tag]
-  git tag -a my_tag -m "tag message" (create tag)
-  git push origin my_tag --tags (push tag to remote)
-  git tag -d my_tag (delete local tag)
-  git push origin :refs/tags/my_tag (delete remote tag)
+  git tag (show all tags)
+  git tag -a <tag_name> -m "tag message" (create tag)
+  git push <remote> <tag_name> (push tag to remote)
+  git push <remote> --tags (push all local new tags to remote)
+  git tag -d <tag_name> (delete local tag)
+  git push <remote> :refs/tags/my_tag (delete remote tag)
   git diff tag1 tag2 --stat (show difference between tags)
 
-[merge]
-  git merge branch_name/tag/sha1 (merge target to current)
+[merge/rebase]
+  git merge <branch>/<tag>/<sha1> (merge target to current)
+  git rebase <branch> (rebase current branch to target branch)
 
 [reset]
   git reset HEAD <file> (remove file from cache)
   
 
 [remote]
-  git remote set-url origin new_url (set/reset remote repository url)
+  git remote set-url <remote> new_url (set/reset remote repository url)
   git remote update (fetch from all remotes)
-  git remote prune origin (remove any old, conflicting branches)
-  git remote show origin (show info of remote)
+  git remote prune <remote> (remove any old, conflicting branches)
+  git remote show <remote> (show info of remote)
   git remote update (update remote to local)
+  git remote add <name> url (add remote repository)
+  git remote rename <old_name> <new_name> (rename remote repo)
+  git remote rm <name> (remove remote repository)
 
