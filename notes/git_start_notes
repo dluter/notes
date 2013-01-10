@@ -81,3 +81,5 @@
   git remote add <name> url (add remote repository)
   git remote rename <old_name> <new_name> (rename remote repo)
   git remote rm <name> (remove remote repository)
+[filter]
+  git filter-branch -f --env-filter "GIT_AUTHOR_NAME='dluter'; GIT_AUTHOR_EMAIL='dluter@gmail.com'; GIT_COMMITTER_NAME='dluter'; GIT_COMMITTER_EMAIL='dluter@gmail.com';" HEAD
