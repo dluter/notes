@@ -11,3 +11,7 @@ sudo apt-get install  cscope ctags
 
 echo "install some useful packages"
 sudo apt-get install vim git git-core minicom stardict ia32-libs gtkterm libtool openssh-server
+
+echo "install some tools"
+sudo apt-get install sysstat slurm dstat iotop htop powertop rsync curl mtr traceroot iftop;
+sudo apt-get install nethogs wireshark
