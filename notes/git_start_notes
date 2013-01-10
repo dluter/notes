@@ -71,6 +71,11 @@
 
 [reset]
   git reset HEAD <file> (remove file from cache)
+  reset branch to one commit
+  git reset --hard commit_sha
+  reset branch to last N commit
+  git reset --hard HEAD~[N]
+
 
 [remote]
   git remote set-url <remote> new_url (set/reset remote repository url)
