@@ -9,3 +9,15 @@
 3. traceroot/mtr
 
 4. dmesg to show hardware or driver error.
+
+5. uname -r(print system information)
+
+6. update virtualbox when update linux kernel.
+   sudo apt-get install linux-headers-$(uname -r)
+   sudo /etc/init.d/vboxdrv setup
+
+7. remove old linux kernel
+   uname -r
+   dpkg --list | grep linux-image
+   sudo apt-get purge <image-name>
+   sudo update-grub2
