@@ -25,6 +25,13 @@
   git status -uno [-uall -unormal] (don't show untracked files)
   git status -s (short-format output)
 
+[diff]
+  git diff (to see unstaged changes)
+  git diff --cached (to see staged changes)
+  git diff HEAD (to see changes with last commit)
+  git diff --stat
+  git diff --checked (to see unused whitespace)
+
 [commit]
   git commit --amend (modify last commit information)
 
