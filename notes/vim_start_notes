@@ -11,13 +11,20 @@
   VG select all from current to the end of file
   vgg select all from current to the begining of file
   Yp copy current line to next line
+  ddp cut current line and paste it to a position
 
 2.enter visual mode
   v enter characterwise visual mode
   V enter linewise visual mode
   ctrl-V enter block visual mode
 
-3.redo and undo
+3.edit
+  i insert at the left of current character
+  I intert at the begining of current line
+  a append at the right of current charater
+  A append at the end of current line
+  o insert a new line below current line
+  O insert a new line above current line
   u undo the last operation
   ctrl-r redo the change
 
@@ -32,6 +39,9 @@
           already at start
   B  move backward to the beginning of the current space-terminated word, ignore
           punctuation
+  H  move to the top of current screen
+  M  move to the middle of current screen
+  L  move to the bottom of current screen
   e  move to the end of word, or to next word if already at end
   E  move to the end of space-terminated word, ignore punctuation
   ^  jump to start of text on the current line. Far superior to leaning on
@@ -56,6 +66,11 @@
   :q! quit the current window even if there are unsaved changes
   :qa quit all windows unless there are unsaved changes
   :qa! quit all windows even if there are unsaved changes
+  :w  write content file
+  :w filename write content to specified file
+  :w! filename force write content to specified file
+  :w >> filename append content to specified file
+  :
   :wq save changes and quit current window
   ZZ save changes and quit current window(as :wq)
   :e! discard all changes and reload file
@@ -90,6 +105,19 @@
 	:imap				            y
 	:cmap					               y
 
-10. extras
+10. mark
+  ma make a mark named "a" [a-z]
+  `a jump to mark which named "a"
+  :marks list all marks
+  :delmarks! delete all marks
+  :delmarks a delete mark named "a"
+
+11. extras
   ,be open buffer explorer
   ,zz max current window or resume window size.
+
+12. fold
+  zo open folder
+  zc compress folder
+  zj jump to the nearest folder
+
